@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 28px;
+            color: red;
+        }
+        .button-container {
+            margin-top: 30px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #yes {
+            background-color: red;
+            color: white;
+        }
+        #no {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Love, will you be my Valentine? ❤️</h1>
+
+    <div class="button-container">
+        <button id="yes" onclick="sayYes()">Yes</button>
+        <button id="no" onclick="growYes()">No</button>
+    </div>
+
+    <script>
+        let yesButton = document.getElementById("yes");
+        let noButton = document.getElementById("no");
+        let yesSize = 20;
+        
+        function sayYes() {
+            alert("ILOVEYOUUUUUSOMUCH YEHEY");
+        }
+
+        function growYes() {
+            yesSize += 10;
+            yesButton.style.fontSize = yesSize + "px";
+            yesButton.style.padding = (yesSize / 2) + "px " + (yesSize) + "px";
+
+            if (yesSize >= 100) {
+                noButton.style.display = "none"; // Hides the "No" button
+            }
+        }
+    </script>
+
+</body>
+</html>
